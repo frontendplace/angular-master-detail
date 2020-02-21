@@ -1,4 +1,17 @@
-<main>
-  <h1>app component</h1>
-  <router-outlet></router-outlet>
-</main>
+<div class="app">
+  <header>
+    <h1>Main component</h1>
+    <nav>
+      <ul>
+        <li>
+          <a [routerLink]="['/jobs']" href="">Jobs</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section>
+      <router-outlet></router-outlet>
+    </section>
+  </main>
+</div>

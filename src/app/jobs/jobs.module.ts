@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { JobsRoutingModule, routedComponents } from './jobs-routing.module';
-import { JobsdataService } from './jobsdata.service';
+import { JobsService } from './jobs.service';
 
 @NgModule({
   declarations: [
@@ -12,7 +12,7 @@ import { JobsdataService } from './jobsdata.service';
     JobsRoutingModule
   ],
   providers: [
-    JobsdataService
+    JobsService
   ]
 })
 export class JobsModule { }

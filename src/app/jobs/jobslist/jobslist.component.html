@@ -1,4 +1,13 @@
-<p>jobslist works!</p>
-<a href="" [routerLink]="'1'">
-  link naar nr 1
-</a>
+<h2>Job list component</h2>
+
+<ul *ngIf="jobs$ | async as jobs; else loading" >
+  <li *ngFor="let job of jobs">
+    <a [routerLink]="''+job.id">
+      {{job.name}}
+    </a>
+  </li>
+</ul>
+
+<ng-template #loading>
+  loading job ....
+</ng-template>
