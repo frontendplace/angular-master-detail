@@ -1,12 +1,18 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { JobsComponent } from './jobs.component';
-import { JobComponent } from './job/job.component';
+import { JobsRoutingModule, routedComponents } from './jobs-routing.module';
+import { JobsdataService } from './jobsdata.service';
 
 @NgModule({
-  declarations: [JobsComponent, JobComponent],
+  declarations: [
+    routedComponents
+  ],
   imports: [
-    CommonModule
+    CommonModule,
+    JobsRoutingModule
+  ],
+  providers: [
+    JobsdataService
   ]
 })
 export class JobsModule { }

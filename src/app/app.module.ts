@@ -1,15 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routableComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { JobsModule } from './jobs/jobs.module';
-import { PagenotfoundComponent } from './pagenotfound.component';
+// import { PageNotFoundComponent } from './page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PagenotfoundComponent
+    routableComponents // add all the routable components as an array
   ],
   imports: [
     BrowserModule,
